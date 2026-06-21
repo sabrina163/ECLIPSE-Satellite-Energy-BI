@@ -1,1 +1,0 @@
-Project illustrations and screenshots.
