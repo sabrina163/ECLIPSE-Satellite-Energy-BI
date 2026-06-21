@@ -59,7 +59,7 @@ Machine Learning Models
 ## 🗄️ Dimensional Model
 
 <p align="center">
-  <img src="images/schema_dimensionnel.png" width="80%">
+  <img src="images/schema_dimensionnel.jpg" width="80%">
 </p>
 
 The data warehouse follows a dimensional modeling approach based on fact and dimension tables stored in SQL Server.
