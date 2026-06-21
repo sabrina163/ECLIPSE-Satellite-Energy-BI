@@ -1,8 +1,11 @@
-<p align="center">
-  <img src="images/eclipse_banner.png" width="100%">
-</p>
-
 # 🚀 E.C.L.I.P.S.E.
+
+![ECLIPSE Banner](images/eclipse_banner.png)
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge\&logo=microsoftsqlserver\&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge\&logo=powerbi\&logoColor=black)
+![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=for-the-badge)
 
 ## Energy Consumption & Load Intelligence Platform for Space Exploration
 
@@ -58,9 +61,7 @@ Machine Learning Models
 
 ## 🗄️ Dimensional Model
 
-<p align="center">
-  <img src="images/schema_dimensionnel.jpg" width="80%">
-</p>
+![Dimensional Model](images/schema_dimensionnel.jpg)
 
 The data warehouse follows a dimensional modeling approach based on fact and dimension tables stored in SQL Server.
 
@@ -86,7 +87,7 @@ The data warehouse follows a dimensional modeling approach based on fact and dim
 
 ### 5. Orbital Altitude Analysis
 
-![Orbital Analysis](dashboard/05_altitude_analysis.png)
+![Altitude Analysis](dashboard/05_altitude_analysis.png)
 
 ### 6. Machine Learning
 
@@ -124,6 +125,21 @@ The XGBoost model achieved the highest predictive performance and accurately rep
 ✅ Orbital altitude variations had no significant impact on battery voltage.
 
 ✅ Machine Learning successfully predicted the satellite energy state with high accuracy.
+
+---
+
+## 🎓 Skills Demonstrated
+
+* Data Engineering
+* ETL Development
+* API Integration
+* Data Warehousing
+* Dimensional Modeling
+* SQL Development
+* Power BI Reporting
+* Data Visualization
+* Machine Learning
+* Predictive Analytics
 
 ---
 
@@ -180,5 +196,3 @@ sql/            SQL scripts and data warehouse creation
 **Sabrina Gharbi**
 
 Business Intelligence Consultant Training – Technifutur
-
-2026
