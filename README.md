@@ -1,92 +1,102 @@
+<p align="center">
+  <img src="images/eclipse_banner.png" width="100%">
+</p>
+
 # 🚀 E.C.L.I.P.S.E.
 
 ## Energy Consumption & Load Intelligence Platform for Space Exploration
 
-A complete Business Intelligence and Machine Learning project focused on analyzing and predicting the energy behavior of the **TSURU CubeSat** using real telemetry, orbital and space weather data.
+A complete Business Intelligence and Machine Learning project focused on analyzing and predicting the energy behavior of the TSURU CubeSat using real telemetry, orbital and space weather data.
 
 ---
 
-## 🛰️ Project Context
+## 🛰️ Project Overview
 
-Satellites rely on a delicate balance between energy production and energy consumption to remain operational in orbit.
+TSURU is a CubeSat deployed from the International Space Station (ISS) as part of the BIRDS program.
 
-This project investigates the energy performance of the **TSURU CubeSat**, a nanosatellite deployed from the International Space Station (ISS), by combining telemetry measurements, orbital parameters and space weather indicators.
+This project investigates how a nanosatellite manages its energy resources while operating in Low Earth Orbit by combining telemetry data, space weather indicators and orbital parameters.
 
-The goal was to understand the factors influencing the satellite's energy system and evaluate whether Machine Learning could accurately predict its battery state.
+The project follows a complete BI workflow, from data collection and storage to dashboard development and predictive analytics.
 
 ---
 
 ## 🎯 Objectives
 
-* Analyze the CubeSat energy system.
-* Study the influence of space weather conditions.
+* Analyze the satellite energy system.
+* Study the influence of space weather.
 * Evaluate the impact of orbital altitude.
-* Build predictive Machine Learning models.
-* Develop an interactive Power BI dashboard for data exploration.
+* Develop predictive Machine Learning models.
+* Create an interactive Power BI dashboard.
 
 ---
 
 ## 📊 Dataset
 
-The study is based on:
-
-* More than **23,000 telemetry measurements**
-* Approximately **302 days of mission data**
-* Real satellite energy measurements
+* 23,266 telemetry measurements
+* 302 days of mission data
+* EPS (Electrical Power System) telemetry
 * NOAA and NASA space weather indicators
 * ISS orbital parameters
 
 ---
 
-## 🏗️ Data Pipeline
+## 🏗️ BI Architecture
 
 ```text
-APIs & Raw Data
-       ↓
-Python Data Processing
-       ↓
+API Collection
+      ↓
+Python Processing
+      ↓
 SQL Server Data Warehouse
-       ↓
+      ↓
 Power BI Dashboard
-       ↓
+      ↓
 Machine Learning Models
 ```
 
 ---
 
-## 📈 Dashboard Analysis
+## 🗄️ Dimensional Model
 
-The Power BI dashboard includes six analysis pages:
+<p align="center">
+  <img src="images/schema_dimensionnel.png" width="80%">
+</p>
 
-### 1. Mission Overview
+The data warehouse follows a dimensional modeling approach based on fact and dimension tables stored in SQL Server.
 
-General mission context and key indicators.
+---
 
-### 2. Energy System Analysis
+## 📈 Dashboard Preview
 
-Battery voltage, solar production and energy balance.
+### 1. Mission Context
+
+![Mission Context](dashboard/01_context.png)
+
+### 2. Energy Analysis
+
+![Energy Analysis](dashboard/02_energy_analysis.png)
 
 ### 3. Space Weather Monitoring
 
-Analysis of Kp, Ap and Fobs indices.
+![Space Weather](dashboard/03_space_weather.png)
 
 ### 4. Space Weather Impact
 
-Comparison of energy performance under different geomagnetic conditions.
+![Space Weather Impact](dashboard/04_space_weather_impact.png)
 
 ### 5. Orbital Altitude Analysis
 
-Evaluation of the relationship between altitude and battery voltage.
+![Orbital Analysis](dashboard/05_altitude_analysis.png)
 
 ### 6. Machine Learning
 
-Model comparison, feature importance and prediction performance.
+![Machine Learning](dashboard/06_machine_learning.png)
 
 ---
 
 ## 🤖 Machine Learning
 
-Several regression models were trained and evaluated:
+Several regression models were evaluated:
 
 * Random Forest
 * Gradient Boosting
@@ -95,11 +105,13 @@ Several regression models were trained and evaluated:
 
 ### Best Performing Model
 
-| Model   | R²      | MAE    | RMSE   |
-| ------- | ------- | ------ | ------ |
-| XGBoost | 98.65 % | 0.0071 | 0.0098 |
+| Metric | Value   |
+| ------ | ------- |
+| R²     | 98.65 % |
+| MAE    | 0.0071  |
+| RMSE   | 0.0098  |
 
-The results demonstrate that the satellite energy state can be predicted with a very high level of accuracy using the available telemetry and environmental data.
+The XGBoost model achieved the highest predictive performance and accurately reproduced the battery voltage behavior observed during the mission.
 
 ---
 
@@ -107,11 +119,11 @@ The results demonstrate that the satellite energy state can be predicted with a 
 
 ✅ Solar panels provide sufficient energy to maintain satellite operations.
 
-✅ No significant influence of space weather was observed during the studied period.
+✅ Space weather had limited influence during the analyzed period.
 
-✅ Orbital altitude variations had minimal impact on battery voltage.
+✅ Orbital altitude variations had no significant impact on battery voltage.
 
-✅ Machine Learning achieved excellent predictive performance.
+✅ Machine Learning successfully predicted the satellite energy state with high accuracy.
 
 ---
 
@@ -145,8 +157,9 @@ The results demonstrate that the satellite energy state can be predicted with a 
 ## 📂 Repository Structure
 
 ```text
-dashboard/      Power BI screenshots
-notebooks/      Data preparation & Machine Learning notebooks
+dashboard/      Power BI dashboard screenshots
+images/         Banner and dimensional model
+notebooks/      Data preparation and Machine Learning notebooks
 presentation/   Final presentation
 sql/            SQL scripts and data warehouse creation
 ```
@@ -155,10 +168,10 @@ sql/            SQL scripts and data warehouse creation
 
 ## 🔭 Future Improvements
 
-* Integrate data from additional CubeSats of the BIRDS program.
+* Integrate additional CubeSats from the BIRDS program.
 * Analyze stronger geomagnetic storm events.
-* Develop forecasting models capable of predicting energy status several hours ahead.
-* Extend the platform to support additional satellite missions.
+* Develop energy forecasting models several hours ahead.
+* Extend the platform to additional satellite missions.
 
 ---
 
