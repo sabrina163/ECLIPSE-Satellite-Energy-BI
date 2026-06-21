@@ -2,114 +2,116 @@
 
 ## Energy Consumption & Load Intelligence Platform for Space Exploration
 
-Business Intelligence and Machine Learning project focused on the analysis and prediction of the energy behavior of the **TSURU CubeSat** using real telemetry, orbital and space weather data.
+A complete Business Intelligence and Machine Learning project focused on analyzing and predicting the energy behavior of the **TSURU CubeSat** using real telemetry, orbital and space weather data.
 
 ---
 
-## 📖 Project Overview
+## 🛰️ Project Context
 
-The objective of this project is to better understand how a nanosatellite manages its energy resources while orbiting the Earth.
+Satellites rely on a delicate balance between energy production and energy consumption to remain operational in orbit.
 
-The study combines:
+This project investigates the energy performance of the **TSURU CubeSat**, a nanosatellite deployed from the International Space Station (ISS), by combining telemetry measurements, orbital parameters and space weather indicators.
 
-* Satellite telemetry data
-* Space weather indicators (Kp, Ap, Fobs)
-* Orbital parameters from the ISS
-* Machine Learning models
-
-More than **23,000 real measurements** were analyzed over approximately **302 days of mission operations**.
+The goal was to understand the factors influencing the satellite's energy system and evaluate whether Machine Learning could accurately predict its battery state.
 
 ---
 
 ## 🎯 Objectives
 
-* Analyze the CubeSat energy system
-* Evaluate the impact of space weather
-* Evaluate the impact of orbital altitude
-* Build predictive Machine Learning models
-* Create an interactive Power BI dashboard
+* Analyze the CubeSat energy system.
+* Study the influence of space weather conditions.
+* Evaluate the impact of orbital altitude.
+* Build predictive Machine Learning models.
+* Develop an interactive Power BI dashboard for data exploration.
 
 ---
 
-## 🛰️ Studied Satellite
+## 📊 Dataset
 
-**TSURU CubeSat**
+The study is based on:
 
-* BIRDS Program
-* Deployed from the International Space Station (ISS)
-* Low Earth Orbit (~400 km)
+* More than **23,000 telemetry measurements**
+* Approximately **302 days of mission data**
+* Real satellite energy measurements
+* NOAA and NASA space weather indicators
+* ISS orbital parameters
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Data Pipeline
 
-API Data Collection
-
-↓
-
+```text
+APIs & Raw Data
+       ↓
 Python Data Processing
-
-↓
-
+       ↓
 SQL Server Data Warehouse
-
-↓
-
+       ↓
 Power BI Dashboard
-
-↓
-
+       ↓
 Machine Learning Models
+```
 
 ---
 
-## 📊 Dashboard Analysis
+## 📈 Dashboard Analysis
 
-The dashboard includes:
+The Power BI dashboard includes six analysis pages:
 
-### Energy Monitoring
+### 1. Mission Overview
 
-* Battery voltage analysis
-* Solar production analysis
-* Energy balance monitoring
+General mission context and key indicators.
 
-### Space Weather Analysis
+### 2. Energy System Analysis
 
-* Kp Index
-* Ap Index
-* Solar Flux (Fobs)
+Battery voltage, solar production and energy balance.
 
-### Orbital Analysis
+### 3. Space Weather Monitoring
 
-* Altitude monitoring
-* Orbital parameter analysis
+Analysis of Kp, Ap and Fobs indices.
 
-### Machine Learning
+### 4. Space Weather Impact
 
-* Model comparison
-* Feature importance analysis
-* Prediction performance evaluation
+Comparison of energy performance under different geomagnetic conditions.
+
+### 5. Orbital Altitude Analysis
+
+Evaluation of the relationship between altitude and battery voltage.
+
+### 6. Machine Learning
+
+Model comparison, feature importance and prediction performance.
 
 ---
 
-## 🤖 Machine Learning Models
+## 🤖 Machine Learning
 
-Several regression models were evaluated:
+Several regression models were trained and evaluated:
 
 * Random Forest
 * Gradient Boosting
 * Extra Trees
 * XGBoost
 
-### Best Model
+### Best Performing Model
 
-**XGBoost**
+| Model   | R²      | MAE    | RMSE   |
+| ------- | ------- | ------ | ------ |
+| XGBoost | 98.65 % | 0.0071 | 0.0098 |
 
-| Metric | Value   |
-| ------ | ------- |
-| R²     | 98.65 % |
-| MAE    | 0.0071  |
-| RMSE   | 0.0098  |
+The results demonstrate that the satellite energy state can be predicted with a very high level of accuracy using the available telemetry and environmental data.
+
+---
+
+## 🔍 Key Findings
+
+✅ Solar panels provide sufficient energy to maintain satellite operations.
+
+✅ No significant influence of space weather was observed during the studied period.
+
+✅ Orbital altitude variations had minimal impact on battery voltage.
+
+✅ Machine Learning achieved excellent predictive performance.
 
 ---
 
@@ -143,22 +145,20 @@ Several regression models were evaluated:
 ## 📂 Repository Structure
 
 ```text
-dashboard/       Power BI screenshots
-images/          Project illustrations
-notebooks/       Python notebooks
-presentation/    Final presentation
-report/          Final report
-sql/             SQL scripts
+dashboard/      Power BI screenshots
+notebooks/      Data preparation & Machine Learning notebooks
+presentation/   Final presentation
+sql/            SQL scripts and data warehouse creation
 ```
 
 ---
 
 ## 🔭 Future Improvements
 
-* Integrate additional CubeSats from the BIRDS program
-* Analyze stronger geomagnetic storms
-* Develop energy forecasting models several hours ahead
-* Extend the platform to other satellite missions
+* Integrate data from additional CubeSats of the BIRDS program.
+* Analyze stronger geomagnetic storm events.
+* Develop forecasting models capable of predicting energy status several hours ahead.
+* Extend the platform to support additional satellite missions.
 
 ---
 
